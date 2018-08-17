@@ -1,0 +1,43 @@
+MLog initialization issue: slf4j found no binding or threatened to use its (dangerously silent) NOPLogger. We consider the slf4j library not found.
+Jul 09, 2018 10:33:28 AM cHandling load request of a new Scheduler for project 'test'.
+Setting up new Scheduler for project 'test'.
+Creating new GlobalDownloader for 'data' for plugin 'TRMM3B42RT_New'.
+GlobalDownloader for 'data' for plugin 'TRMM3B42RT_New' created.
+Starting GlobalDownloader for 'data' for plugin 'TRMM3B42RT_New'.
+Creating new LocalDownloader for 'data' for plugin 'TRMM3B42RT_New'.
+[GDL 0 on Thread 19] GlobalDownloader of 'data' files for plugin 'TRMM3B42RT_New' starting from 2018-06-11.
+Running: TRMM3B42RT_NewDownloader
+Creating ListDatesFiles map for 'TRMM3B42RT_New':'data'.
+LocalDownloader for 'data' for plugin 'TRMM3B42RT_New' created.
+Updating Scheduler status in EASTWeb Manager.
+Done updating Scheduler status in EASTWeb Manager.
+Done setting up new Scheduler for project 'test'.
+Retrieving Scheduler Status.
+Scheduler Status retrieved.
+Load request of a new Scheduler for project 'test' handled.
+Handling request to start back up the Scheduler for project 'test'.
+Starting Scheduler for project 'test'.
+Attempting update of Scheduler for project 'test'.
+Updating Scheduler status in EASTWeb Manager.
+Done updating Scheduler status in EASTWeb Manager.
+Updating Scheduler status in EASTWeb Manager.
+Done updating Scheduler status in EASTWeb Manager.
+Finished attempting update of Scheduler for project 'test'.
+Finished starting Scheduler for project 'test'.
+Restart request of the Scheduler for project 'test' handled.
+Handling Scheduler event.
+Scheduler event handled.
+Updating Scheduler status in EASTWeb Manager.
+Done updating Scheduler status in EASTWeb Manager.
+Checking for unprocessed downloads for plugin 'TRMM3B42RT_New' in project 'test'.
+Finished checking for unprocessed downloads Files for 0 day loaded for plugin 'TRMM3B42RT_New' in ERROR: Timed out waiting for Process Workers to complete. [Thread: ProcessWorker-Updating-Scheduler-Status]
+java.lang.Exception: Timed out waiting for Process Workers to complete.
+	at version2.prototype.EASTWebManager.stopAndShutdown(EASTWebManager.java:674)
+	at version2.prototype.EASTWebManager.StopAndShutdown(EASTWebManager.java:189)
+	at version2.prototype.Scheduler.SchedulerWorker.call(SchedulerWorker.java:92)
+	at version2.prototype.Scheduler.SchedulerWorker.call(SchedulerWorker.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThrD:\data\Error_Log_2018_7_9_103349.log
+EASTWeb successfully shut down.
+adPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<RequestMenu>
+		<request>
+			<Title>epidata_update</Title>
+			<pattern>2</pattern>
+			<microservice>epidata</microservice>
+		</request>	
+		
+		<request>
+			<Title>envdata_update</Title>
+			<pattern>2</pattern>
+			<microservice>eastweb</microservice>					
+		</request>
+		
+		<request>
+			<Title>data_update</Title>
+			<pattern>2</pattern>
+			<microservice>epidata</microservice>
+			<microservice>eastweb</microservice>
+		</request>
+		
+		<request>
+			<Title>envdata_transfer</Title>
+			<pattern>1</pattern>
+			<microservice>eastweb</microservice>
+			<microservice>envDataTsf</microservice>
+		</request>
+		
+		<request>
+			<Title>report_generate</Title>
+			<pattern>3</pattern>
+			<level id="0">
+					<microservice>eastweb</microservice>
+					<microservice>epidata</microservice>
+			</level>
+			<level id="1">
+					<parent>eastweb</parent>
+					<parent>epidata</parent>
+					<microservice>envDataTsf</microservice>
+			</level>
+			<level id="2">
+					<parent>envDataTsf</parent>
+					<microservice>forecast</microservice>
+			</level>
+			<level id="3">
+					<parent>forecast</parent>
+					<microservice>report</microservice>
+			</level>
+		</request>		
+		
+</RequestMenu>
